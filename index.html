@@ -27,24 +27,118 @@
             <i class="fa-solid fa-bars d-flex align-items-center justify-content-center"></i>
         </div>
     </div>
-    <div class="container-fluid">
-        <div class="container mt-5">
-            <h1 class="text-center w-100">My point today : </h1>
-            <h1 class="text-center my-5" id="Count">0</h1>
-            <div class="d-flex align-items-center justify-content-around mx-auto" style="width:600px;height: 50px;">
-                <button class="d-flex justify-content-center align-items-center bg-danger w-25 h-100"
-                    onclick="increase()">
-                    <h3 class="w-100 text-center">Increase</h3>
-                </button>
-                <button class="d-flex justify-content-center align-items-center bg-danger w-25 h-100"
-                    onclick="decrease()">
-                    <h3 class="w-100 text-center">Decrease</h3>
+    <div class="d-flex justify-content-between container-fluid row">
+        <div class="col-xl-6 col-12">
+            <div class="container mt-5">
+                <h1 class="text-center w-100">Your points : </h1>
+                <h1 class="text-center my-5" id="Count">0</h1>
+                <div class="d-flex align-items-center justify-content-around mx-auto row">
+                    <button
+                        class="d-flex justify-content-center align-items-center bg-danger col-lg-3 col-12 mb-lg-0 mb-3 h-100"
+                        onclick="increase()">
+                        <h3 class="w-100 text-center">Increase</h3>
+                    </button>
+                    <button class="d-flex justify-content-center align-items-center bg-danger col-lg-3 col-12 h-100"
+                        onclick="decrease()">
+                        <h3 class="w-100 text-center">Decrease</h3>
+                    </button>
+                </div>
+                <button class="d-flex mt-md-5 mt-3 justify-content-center align-items-center bg-danger mx-auto"
+                    onclick="reset()" style="width:200px;height: 50px;">
+                    <h3 class="w-100 text-center">Reset</h3>
                 </button>
             </div>
-            <button class="d-flex mt-5 justify-content-center align-items-center bg-danger mx-auto" onclick="reset()"
-                style="width:200px;height: 50px;">
-                <h3 class="w-100 text-center">Reset</h3>
-            </button>
+        </div>
+        <div class="col-xl-6 col-12">
+            <div class="container mt-5">
+                <h1 class="text-center w-100">Your keys : </h1>
+                <h1 class="text-center my-5 amountKey">0</h1>
+                <div class="d-flex align-items-center justify-content-around mx-auto row">
+                    <button
+                        class="d-flex justify-content-center align-items-center bg-danger col-lg-3 col-12 mb-lg-0 mb-3 h-100"
+                        onclick="increaseKey()">
+                        <h3 class="w-100 text-center">Increase</h3>
+                    </button>
+                    <button class="d-flex justify-content-center align-items-center bg-danger col-lg-3 col-12 h-100"
+                        onclick="decreaseKey()">
+                        <h3 class="w-100 text-center">Decrease</h3>
+                    </button>
+                </div>
+                <button class="d-flex mt-md-5 mt-3 justify-content-center align-items-center bg-danger mx-auto"
+                    onclick="resetKey()" style="width:200px;height: 50px;">
+                    <h3 class="w-100 text-center">Reset</h3>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid bg-light mx-auto py-5 mt-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <h3 class="text-center">The price of using abilities</h3>
+            </div>
+            <ul class="col-xl-5 col-md-8 col-12 mx-auto mt-3 " style="list-style: none;">
+                <li class="text-center py-3 fs-5 " style="border: 2px solid aqua; border-bottom: 0px ;">Skip an
+                    exercise
+                    : 3
+                    points
+                    and 1
+                    key</li>
+                <li class="text-center py-3 fs-5 " style="border: 2px solid aqua; border-bottom: 0px ;">A cup of
+                    coffee :
+                    5
+                    points
+                    and 1
+                    key</li>
+                <li class="text-center py-3 fs-5 " style="border: 2px solid aqua; border-bottom: 0px ;">15 minutes
+                    join
+                    in
+                    contests: 5
+                    points and 1 key
+                </li>
+                <li class="text-center py-3 fs-5 " style="border: 2px solid aqua; border-bottom: 0px ;">A cup of
+                    milo : 6
+                    points
+                    and 1 key
+                </li>
+                <li class="text-center py-3 fs-5 " style="border: 2px solid aqua; border-bottom: 0px ;">A cup of
+                    cacao :
+                    6
+                    points
+                    and 1
+                    key</li>
+                <li class="text-center py-3 fs-5 " style="border: 2px solid aqua; border-bottom: 0px ;">A bottle of
+                    revive : 6
+                    points and
+                    1 key</li>
+                <li class="text-center py-3 fs-5 " style="border: 2px solid aqua; border-bottom: 0px ;">Skip a
+                    lesson: 8
+                    points and
+                    1 key
+                </li>
+                <li class="text-center py-3 fs-5 " style="border: 2px solid aqua; border-bottom: 0px ;">Skip a
+                    night
+                    lesson :
+                    10
+                    points
+                    and 1 key</li>
+                <li class="text-center py-3 fs-5 " style="border: 2px solid aqua; border-bottom: 0px ;">Skip an
+                    evening
+                    class
+                    : 10
+                    points
+                    and 2 key
+                </li>
+                <li class="text-center py-3 fs-5 " style="border: 2px solid aqua; border-bottom: 0px ;">Skip a
+                    morning
+                    class :
+                    15
+                    points
+                    and 2 key</li>
+                <li class="text-center py-3 fs-5 " style="border: 2px solid aqua;">A full day for relaxing :
+                    25
+                    points and 5 keys
+                </li>
+            </ul>
         </div>
     </div>
     <!-- Bootstrap5-->

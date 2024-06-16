@@ -65,3 +65,63 @@ function reset() {
         }
     }
 }
+
+let amountKey = document.querySelector(".amountKey")
+if (localStorage.getItem("key")) {
+    let key = localStorage.getItem("key")
+    amountKey.innerHTML = key
+}
+else {
+    let key = 0
+    amountKey.innerHTML = key
+}
+function increaseKey() {
+    if (localStorage.getItem("key")) {
+        let key = parseInt(localStorage.getItem("key"))
+        key += 1
+        amountKey.innerHTML = key
+        localStorage.setItem("key", JSON.stringify(key))
+    }
+    else {
+        let key = 0
+        key += 1
+        amountKey.innerHTML = key
+        localStorage.setItem("key", JSON.stringify(key))
+    }
+}
+function decreaseKey() {
+    if (localStorage.getItem("key")) {
+        let key = parseInt(localStorage.getItem("key"))
+        if (key == 0) {
+            alert("Don't have any keys to decrease!")
+        }
+        else {
+            key -= 1
+            amountKey.innerHTML = key
+            localStorage.setItem("key", JSON.stringify(key))
+        }
+    }
+    else {
+        let key = 0
+        key -= 1
+        amountKey.innerHTML = key
+        localStorage.setItem("key", JSON.stringify(key))
+    }
+}
+function resetKey() {
+    if (localStorage.getItem("key")) {
+        let key = parseInt(localStorage.getItem("key"))
+        if (key == 0) {
+            alert("You don't have any keys to reset!")
+            return
+        }
+        key = 0
+        amountKey.innerHTML = key
+        localStorage.setItem("key", JSON.stringify(key))
+    }
+    else {
+        let key = 0
+        alert("You don't have any keys to reset!")
+        localStorage.setItem("key", JSON.stringify(key))
+    }
+}
